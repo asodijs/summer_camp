@@ -19,6 +19,8 @@ class SequenceLoader:
     def load_metadata(self):
         meta_file = self.data_folder / "meta.json"
         data = read_data_from_json(meta_file)
+
+        
         self.rs_serials = data["realsense"]["serials"]
         self.rs_width = data["realsense"]["width"]
         self.rs_height = data["realsense"]["height"]
